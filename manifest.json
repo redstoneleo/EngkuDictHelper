@@ -20,7 +20,7 @@
     {
       "all_frames": true,
       "matches": ["<all_urls>"],
-      "js": ["brython.js","brython_stdlib.js","TextExtractor.js"]
+      "js": ["brython.js","brython_stdlib.js","TextExtractor2.js"]
 
     }
   ],
