@@ -1,0 +1,29 @@
+{
+  "name": "英酷词典助手",
+  "description": "碰到不会的单词？鼠标点击一下就可以看到释义——哪里不会点哪里，so easy！必须和英酷词典搭配使用，详情https://www.cnblogs.com/iMath/p/EngkuDict.html",
+  "version": "1.1",
+  "browser_action": {
+    "default_icon" : "EngkuDictLogo.png",
+    "default_title": "必须和英酷词典搭配使用，点击打开软件主页"
+  },
+  "icons" : {
+    "128" : "EngkuDictLogo.png"
+  },
+  "permissions": [
+    "*://*/*", "nativeMessaging", "tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["<all_urls>"],
+      "js": ["brython.js","brython_stdlib.js","TextExtractor.js"]
+
+    }
+  ],
+
+  "manifest_version": 2
+}
